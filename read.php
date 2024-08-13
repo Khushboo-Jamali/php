@@ -19,7 +19,7 @@ $result = mysqli_query($conn, $qurey);
 <style>
     .container {
         height: 100%;
-        width: 100%;
+        width: 110%;
     }
 </style>
 
@@ -60,7 +60,7 @@ $result = mysqli_query($conn, $qurey);
                             <td><?php echo $data['password'] ?></td>
                             <td><?php echo $data['city'] ?></td>
                             <td><?php echo $data['gender'] ?></td>
-                            <td><?php echo implode(' And ', $ex); ?></td>
+                            <td><?php echo implode(',', $ex); ?></td>
                             <td><?php echo $data['description']; ?></td>
 
 
