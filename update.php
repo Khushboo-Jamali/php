@@ -13,8 +13,12 @@ if (isset($_POST['btn'])) {
     $project = $_POST['brands'];
     $im = implode(',',     $project);
     $qurey = "UPDATE crud_data SET name='$name',email='$email',password='$password',city='$city',gender='$gender' ,projects='$im' WHERE id ='$id'";
-    mysqli_query($conn, $qurey);
-    header('location:read.php');
+    $resut = mysqli_query($conn, $qurey);
+    if ($resut) {
+        header('location:read.php');
+    } else {
+        mysqli_errno($conn, $qurey);
+    }
 }
 
 
@@ -53,6 +57,7 @@ if (isset($_POST['btn'])) {
             ?>
 
                 <div class="mb-3">
+                    <input type="hidden" name="id" value="<?php echo $data['id']; ?>">
                     <label for="" class="form-label">Name</label>
                     <input type="text" class="form-control" name="name" id="" value="<?php echo $data['name'] ?>" />
                 </div>
