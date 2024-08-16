@@ -94,8 +94,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label class="form-check-label" for="">Backend</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="" value="Ui/Ux Designer" name="brands[]" />
-                <label class="form-check-label" for="">Ui/Ux Designer</label>
+                <input class="form-check-input" type="checkbox" id="" value="Ui/Ux " name="brands[]" />
+                <label class="form-check-label" for="">Ui/Ux </label>
             </div>
 
             <div class="mb-3">
